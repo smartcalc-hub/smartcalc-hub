@@ -1,4 +1,4 @@
-## Hi there 👋
+SmartCalc Hub - Free Online Calculators for Finance, Health, and Math.
 
 <!--
 **smartcalc-hub/smartcalc-hub** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
