@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+BMI Calculator - Check Your Body Mass Index | SmartCalc Hub
+</title>
+
+<meta name="description"
+content="Calculate your BMI score, weight category, and healthy weight range using our free BMI Calculator.">
+
+<meta name="keywords"
+content="BMI Calculator, Body Mass Index Calculator, Health Calculator, Weight Calculator">
+
+<meta property="og:title" content="SmartCalc Hub">
+<meta property="og:description" content="Free Online Calculators for Everyone">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourdomain.com">
+<meta property="og:image" content="https://yourdomain.com/images/og-image.png">
+
+<link rel="canonical" href="https://yourdomain.com/calculators/bmi.html">
+
+<link rel="icon" type="image/png" href="../images/favicon.png">
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>BMI Calculator</h1>
+
+        <input
+            type="number"
+            id="age"
+            placeholder="Age">
+
+        <select id="gender">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <input
+            type="number"
+            id="weight"
+            placeholder="Weight (kg)">
+
+        <input
+            type="number"
+            id="height"
+            placeholder="Height (cm)">
+
+        <button
+            class="calc-btn"
+            onclick="calculateBMI()">
+            🧮 Calculate
+        </button>
+
+        <h2 id="result"></h2>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="../script.js"></script>
+
+</body>
+</html>

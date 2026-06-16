@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+EMI Calculator - Loan EMI Calculator Online | SmartCalc Hub
+</title>
+
+<meta name="description"
+content="Calculate your monthly EMI, total payment, and total interest instantly with our free EMI Calculator.">
+
+<meta name="keywords"
+content="EMI Calculator, Loan EMI Calculator, EMI Calculation, Home Loan EMI, Car Loan EMI">
+
+<meta property="og:title" content="SmartCalc Hub">
+<meta property="og:description" content="Free Online Calculators for Everyone">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourdomain.com">
+<meta property="og:image" content="https://yourdomain.com/images/og-image.png">
+
+<link rel="canonical" href="https://yourdomain.com/calculators/emi.html">
+
+<link rel="icon" type="image/png" href="../images/favicon.png">
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>EMI Calculator</h1>
+
+        <input
+            type="number"
+            id="loanAmount"
+            placeholder="Loan Amount">
+
+        <input
+            type="number"
+            id="interestRate"
+            placeholder="Annual Interest Rate (%)">
+
+        <input
+            type="number"
+            id="loanTenure"
+            placeholder="Loan Tenure (Years)">
+
+        <button
+            class="calc-btn"
+            onclick="calculateEMI()"> 
+            🧮 Calculate
+        </button>
+
+        <h2 id="result"></h2>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="../script.js"></script>
+
+</body>
+</html>

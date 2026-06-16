@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://yourdomain.com/</loc>
+    </url>
+
+    <url>
+        <loc>https://yourdomain.com/about.html</loc>
+    </url>
+
+    <url>
+        <loc>https://yourdomain.com/contact.html</loc>
+    </url>
+
+    <url>
+        <loc>https://yourdomain.com/privacy.html</loc>
+    </url>
+
+    <url>
+        <loc>https://yourdomain.com/terms.html</loc>
+    </url>
+
+    <url>
+        <loc>https://yourdomain.com/disclaimer.html</loc>
+    </url>
+
+    <url>
+        <loc>https://yourdomain.com/history.html</loc>
+    </url>
+
+    <url>
+        <loc>https://yourdomain.com/calculators/gst.html</loc>
+    </url>
+
+    <url>
+        <loc>https://yourdomain.com/calculators/emi.html</loc>
+    </url>
+
+    <url>
+        <loc>https://yourdomain.com/calculators/sip.html</loc>
+    </url>
+
+    <url>
+        <loc>https://yourdomain.com/calculators/fd.html</loc>
+    </url>
+
+    <url>
+        <loc>https://yourdomain.com/calculators/bmi.html</loc>
+    </url>
+
+    <url>
+        <loc>https://yourdomain.com/calculators/age.html</loc>
+    </url>
+
+    <url>
+        <loc>https://yourdomain.com/calculators/discount.html</loc>
+    </url>
+
+    <url>
+        <loc>https://yourdomain.com/calculators/percentage.html</loc>
+    </url>
+
+</urlset>

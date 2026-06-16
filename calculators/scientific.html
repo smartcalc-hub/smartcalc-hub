@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Scientific Calculator | SmartCalc Hub
+</title>
+
+<link rel="icon"
+type="image/png"
+href="../images/favicon.png">
+
+<link rel="stylesheet"
+href="../style.css">
+
+<link rel="stylesheet"
+href="../scientific.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>
+🧮 Scientific Calculator
+</h1>
+
+<div class="calculator">
+
+<input
+type="text"
+id="display"
+readonly>
+
+<div class="btn-grid">
+
+<button onclick="clearDisplay()">AC</button>
+<button onclick="deleteLast()">DEL</button>
+<button onclick="appendValue('(')">(</button>
+<button onclick="appendValue(')')">)</button>
+<button onclick="appendValue('%')">%</button>
+
+<button onclick="appendFunction('sin(')">sin</button>
+<button onclick="appendFunction('cos(')">cos</button>
+<button onclick="appendFunction('tan(')">tan</button>
+<button onclick="appendFunction('Math.sqrt(')">√</button>
+<button onclick="appendFunction('Math.log10(')">log</button>
+
+<button onclick="appendValue('7')">7</button>
+<button onclick="appendValue('8')">8</button>
+<button onclick="appendValue('9')">9</button>
+<button onclick="appendValue('/')">÷</button>
+<button onclick="appendFunction('Math.log(')">ln</button>
+
+<button onclick="appendValue('4')">4</button>
+<button onclick="appendValue('5')">5</button>
+<button onclick="appendValue('6')">6</button>
+<button onclick="appendValue('*')">×</button>
+<button onclick="appendValue('**2')">x²</button>
+
+<button onclick="appendValue('1')">1</button>
+<button onclick="appendValue('2')">2</button>
+<button onclick="appendValue('3')">3</button>
+<button onclick="appendValue('-')">−</button>
+<button onclick="appendValue('**')">xʸ</button>
+
+<button onclick="appendValue('0')">0</button>
+<button onclick="appendValue('.')">.</button>
+<button onclick="appendValue('Math.PI')">π</button>
+<button onclick="appendValue('+')">+</button>
+<button onclick="appendValue('Math.E')">e</button>
+
+<button
+class="equal-btn"
+onclick="calculateResult()">
+=
+</button>
+
+</div>
+
+</div>
+
+<div id="result"></div>
+
+</div>
+
+<script src="../script.js"></script>
+<script src="../scientific.js"></script>
+
+</body>
+</html>
