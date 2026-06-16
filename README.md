@@ -1,4 +1,18 @@
-SmartCalc Hub - Free Online Calculators for Finance, Health, and Math.
+# SmartCalc Hub
+
+Free online calculators for Finance, Health and Math.
+
+## Calculators
+
+- GST Calculator
+- EMI Calculator
+- SIP Calculator
+- FD Calculator
+- BMI Calculator
+- Age Calculator
+- Discount Calculator
+- Percentage Calculator
+- Scientific calculator
 
 <!--
 **smartcalc-hub/smartcalc-hub** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
