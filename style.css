@@ -14,11 +14,25 @@ body {
 .container {
     max-width: 700px;
     margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,.08);
 }
 
 h1 {
     text-align: center;
-    color: #2563eb;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #60a5fa
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent
 }
 
 p {
@@ -59,9 +73,7 @@ p {
 
     box-shadow:
         0 4px 10px rgba(0,0,0,0.1);
-}
 
-.accordion-btn {
     transition: all .3s ease;
 }
 
@@ -117,13 +129,33 @@ p {
     background: #e2e8f0;
 }
 
+.stats {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.stat-card {
+    flex: 1;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.837);
+}
+
+.stat-card h2 {
+    color: #2563eb;
+    margin-bottom: 5px;
+}
+
 input,
 select {
     width: 100%;
     padding: 12px;
     margin-top: 10px;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 30px;
     box-sizing: border-box;
 }
 
@@ -132,10 +164,25 @@ select {
     text-align: center;
 }
 
-footer {
+.result-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 12px;
+    box-shadow: 0 2px 10px rgba(15, 12, 12, 0.725);
     text-align: center;
-    margin-top: 30px;
-    color: #777;
+}
+
+.result-title {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.result-value {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2563eb;
 }
 
 .hero {
@@ -163,69 +210,117 @@ footer {
 
 }
 
-/* Mobile Responsive */
+.calc-btn {
+    display: block;
 
-@media (max-width: 768px) {
+    width: 220px;
 
-    .container {
-        width: 95%;
-        padding: 15px;
-    }
+    margin: 20px auto;
 
-    h1 {
-        font-size: 28px;
-    }
+    padding: 14px 20px;
 
-    .accordion-btn {
-        font-size: 16px;
-        padding: 14px;
-    }
+    border: none;
 
-    button {
-        font-size: 14px;
-    }
+    border-radius: 30px;
 
-    input,
-    select {
-        font-size: 16px;
-    }
+    background: linear-gradient(
+        135deg,
+        #224ca7ec,
+        #214ababc
+    );
 
-}
+    color: white;
 
-.result-card {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 15px;
-    margin-top: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    text-align: center;
-}
+    font-size: 15px;
 
-.result-title {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 5px;
-}
-
-.result-value {
-    font-size: 22px;
     font-weight: bold;
-    color: #2563eb;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    box-shadow:
+        0 4px 12px rgba(7, 10, 17, 0.512);
+}
+
+.calc-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(37,99,235,0.4);
+
 }
 
 .copy-btn {
-    width: 100%;
+    width: 25%;
     margin-top: 12px;
-    background: #16a34a;
+    background: #03441a;
     color: white;
     border: none;
-    padding: 12px;
-    border-radius: 10px;
+    padding: 14px;
+    border-radius: 30px;
     cursor: pointer;
 }
 
 .copy-btn:hover {
+    opacity: o.9;
+}
+
+.share-btn {
+
+    width: 25%;
+
+    margin-top: 10px;
+
+    background: #354566;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+.share-btn:hover {
     opacity: 0.9;
+}
+
+.pdf-btn {
+
+    width: 25%;
+
+    margin-top: 10px;
+
+    background: #331a1a;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+
+.pdf-btn:hover {
+
+    opacity: 0.9;
+
 }
 
 .theme-switch {
@@ -234,20 +329,21 @@ footer {
 }
 
 .dark-mode {
-    background: #121212;
-    color: white;
+    background: #110d0d;
+    color: rgb(255, 253, 253);
 }
 
 .dark-mode .container {
-    background: #1e1e1e;
-    color: white;
+    background: #0c0a0a;
+    color: rgb(254, 252, 252);
 }
 
 .dark-mode input,
 .dark-mode select {
-    background: #2a2a2a;
-    color: white;
-    border: 1px solid #444;
+    background: #120c0c;
+    color: rgb(244, 241, 241);
+    border: none;
+    
 }
 
 .dark-mode .accordion-content {
@@ -255,7 +351,7 @@ footer {
 }
 
 .dark-mode .result-card {
-    background: #2a2a2a;
+    background: #100d0d;
 }
 
 .dark-mode .result-title {
@@ -268,37 +364,38 @@ footer {
 
 .dark-mode p,
 .dark-mode footer {
-    color: #d1d5db;
+    color: #f8fafd;
 }
 
 .dark-mode .info-card {
-    background: #2a2a2a;
+    background: #2a2727;
 }
 
 .dark-mode .history-box {
 
-    background: #2a2a2a;
+    background: #0c0b0b;
 
 }
 
-#toast {
+.dark-mode .stat-card {
+    background: #000000;
+}
+
+.toast {
+    visibility: hidden;
     position: fixed;
     bottom: 20px;
     right: 20px;
-
-    background: #16a34a;
+    min-width: 200px;
+    background: #333;
     color: white;
-
-    padding: 12px 20px;
-
-    border-radius: 10px;
-
+    text-align: center;
+    font-size: 16px;
+    padding: 16px;
+    border-radius: 20px;
     opacity: 0;
-    visibility: hidden;
-
     transition: 0.3s;
-
-    z-index: 9999;
+    z-index: 999;
 }
 
 #toast.show {
@@ -306,46 +403,10 @@ footer {
     visibility: visible;
 }
 
-.calc-btn {
-    display: block;
-
-    width: 220px;
-
-    margin: 20px auto;
-
-    padding: 14px 20px;
-
-    border: none;
-
-    border-radius: 12px;
-
-    background: linear-gradient(
-        135deg,
-        #2563eb,
-        #1d4ed8
-    );
-
-    color: white;
-
-    font-size: 18px;
-
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: all 0.3s ease;
-
-    box-shadow:
-        0 4px 12px rgba(37,99,235,0.3);
-}
-
-.calc-btn:hover {
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 8px 18px rgba(37,99,235,0.4);
-
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
 }
 
 footer a {
@@ -384,86 +445,6 @@ button:focus {
 
 }
 
-.share-btn {
-
-    width: 100%;
-
-    margin-top: 10px;
-
-    background: #2563eb;
-
-    color: white;
-
-    border: none;
-
-    padding: 12px;
-
-    border-radius: 10px;
-
-    cursor: pointer;
-
-    font-weight: bold;
-
-}
-
-.share-btn:hover {
-
-    opacity: 0.9;
-
-}
-
-.pdf-btn {
-
-    width: 100%;
-
-    margin-top: 10px;
-
-    background: #dc2626;
-
-    color: white;
-
-    border: none;
-
-    padding: 12px;
-
-    border-radius: 10px;
-
-    cursor: pointer;
-
-    font-weight: bold;
-
-}
-
-.pdf-btn:hover {
-
-    opacity: 0.9;
-
-}
-
-.history-box {
-
-    background: white;
-
-    padding: 15px;
-
-    border-radius: 12px;
-
-    margin-top: 20px;
-
-    box-shadow:
-        0 4px 10px rgba(0,0,0,.08);
-
-}
-
-.history-item {
-
-    padding: 10px;
-
-    border-bottom:
-        1px solid #e5e7eb;
-
-}
-
 .history-box {
 
     background: white;
@@ -487,5 +468,34 @@ button:focus {
         1px solid #e5e7eb;
 
     white-space: pre-line;
+
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .accordion-btn {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    input,
+    select {
+        font-size: 16px;
+    }
 
 }
