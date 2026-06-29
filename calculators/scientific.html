@@ -9,7 +9,7 @@
 content="width=device-width, initial-scale=1.0">
 
 <title>
-Scientific Calculator | SmartCalc Hub
+    Scientific Calculator | SmartCalc Hub
 </title>
 
 <link rel="icon" type="image/png" href="../images/favicon.png">
@@ -18,76 +18,94 @@ Scientific Calculator | SmartCalc Hub
 
 <link rel="stylesheet" href="../css/scientific.css">
 
+<link rel="stylesheet" href="../css/header.css">
+
 </head>
 
 <body>
 
-<div class="container">
-
-<h1>
-🧮 Scientific Calculator
-</h1>
-
-<div class="calculator">
-
-<input
-type="text"
-id="display"
-readonly>
-
-<div class="btn-grid">
-
-<button onclick="clearDisplay()">AC</button>
-<button onclick="deleteLast()">DEL</button>
-<button onclick="appendValue('(')">(</button>
-<button onclick="appendValue(')')">)</button>
-<button onclick="appendValue('%')">%</button>
-
-<button onclick="appendFunction('sin(')">sin</button>
-<button onclick="appendFunction('cos(')">cos</button>
-<button onclick="appendFunction('tan(')">tan</button>
-<button onclick="appendFunction('Math.sqrt(')">√</button>
-<button onclick="appendFunction('Math.log10(')">log</button>
-
-<button onclick="appendValue('7')">7</button>
-<button onclick="appendValue('8')">8</button>
-<button onclick="appendValue('9')">9</button>
-<button onclick="appendValue('/')">÷</button>
-<button onclick="appendFunction('Math.log(')">ln</button>
-
-<button onclick="appendValue('4')">4</button>
-<button onclick="appendValue('5')">5</button>
-<button onclick="appendValue('6')">6</button>
-<button onclick="appendValue('*')">×</button>
-<button onclick="appendValue('**2')">x²</button>
-
-<button onclick="appendValue('1')">1</button>
-<button onclick="appendValue('2')">2</button>
-<button onclick="appendValue('3')">3</button>
-<button onclick="appendValue('-')">−</button>
-<button onclick="appendValue('**')">xʸ</button>
-
-<button onclick="appendValue('0')">0</button>
-<button onclick="appendValue('.')">.</button>
-<button onclick="appendValue('Math.PI')">π</button>
-<button onclick="appendValue('+')">+</button>
-<button onclick="appendValue('Math.E')">e</button>
-
-<button
-class="equal-btn"
-onclick="calculateResult()">
-=
-</button>
-
-</div>
-
-</div>
-
-<div id="result"></div>
-
-</div>
+    <div id="header-placeholder"></div>
 
 <div class="container">
+
+    <h1>🧮 SmartCalc Hub</h1>
+        <p>Free Online Calculators for Everyone</p>
+        <p>_________________________________</p>
+        <br><br>
+
+    <h1>
+        🧮 Scientific Calculator
+    </h1>
+
+    <p>
+        This is an online javascript scientific calculator. You can click the buttons or type to perform calculations as you would on a physical calculator.
+    </p>
+    
+    <div class="calculator">
+        <input
+        type="text"
+        id="display"
+        readonly>
+
+        <div class="btn-grid">
+
+            <button onclick="clearDisplay()">AC</button>
+            <button onclick="deleteLast()">DEL</button>
+            <button onclick="appendValue('(')">(</button>
+            <button onclick="appendValue(')')">)</button>
+            <button onclick="appendValue('^2')">x²</button>
+            <button onclick="appendValue('^3')">x³</button>
+            <button onclick="appendValue('^')">xʸ</button>
+            <button onclick="appendInverse()">x⁻¹</button>
+            <button onclick="appendFunction('√(')">√</button>
+            <button onclick="appendFunction('³√(')">³√</button>
+            <button onclick="appendFunction('log(')">log</button>
+            <button onclick="appendFunction('ln(')">ln</button>
+            <button onclick="appendTrig('sin')">sin</button>
+            <button onclick="appendTrig('cos')">cos</button>
+            <button onclick="appendTrig('tan')">tan</button>
+            <button onclick="appendValue('-')">−</button>
+            <button onclick="toggleAngleMode()"> <span id="angleMode">DEG</span> </button>
+            <button onclick="appendFunction('sin⁻¹(')">sin⁻¹</button>
+            <button onclick="appendFunction('cos⁻¹(')">cos⁻¹</button>
+            <button onclick="appendFunction('tan⁻¹(')">tan⁻¹</button>
+            <button onclick="appendValue('7')">7</button> 
+            <button onclick="appendValue('8')">8</button> 
+            <button onclick="appendValue('9')">9</button>
+            <button onclick="appendValue('%')">%</button>
+            <button onclick="appendValue('π')">π</button> 
+            <button onclick="appendValue('e')">e</button>
+            <button onclick="appendValue('EXP')">EXP</button>
+            <button onclick="appendValue('!')">x!</button>
+            <button onclick="appendValue('4')">4</button> 
+            <button onclick="appendValue('5')">5</button> 
+            <button onclick="appendValue('6')">6</button>
+            <button onclick="appendValue('*')">×</button>
+            <button onclick="memoryAdd()">M+</button>
+            <button onclick="memoryRecall()">MR</button> 
+            <button onclick="memoryClear()">MC</button> 
+            <button onclick="appendValue('/')">÷</button>
+            <button onclick="appendValue('1')">1</button> 
+            <button onclick="appendValue('2')">2</button> 
+            <button onclick="appendValue('3')">3</button>
+            <button onclick="appendValue('+')">+</button> 
+            <button onclick="appendValue('EXP')">EXP</button>
+            <button onclick="appendValue('0')">0</button>
+            <button onclick="appendAns()">Ans</button>
+            <button onclick="appendValue('.')">.</button>
+            <button class="equal-btn" onclick="calculateResult()">=</button>
+
+        </div>
+
+    </div>      
+
+    <div id="result"></div>
+
+</div>
+
+<br><br>
+
+<div>
 
         <footer>
 
@@ -116,10 +134,12 @@ onclick="calculateResult()">
         </footer>
     
     </div>
+    
+    <script src="../script.js"></script>
 
-<script src="../script.js"></script>
+    <script src="../js/scientific.js"></script>
 
-<script src="../js/scientific.js"></script>
+    <script src="../js/header.js"></script>
 
 </body>
 </html>
