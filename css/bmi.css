@@ -335,7 +335,7 @@
 
     border: none;
 
-    border-radius: 12px;
+    border-radius: 25px;
 
     background: linear-gradient(
         135deg,
@@ -351,4 +351,37 @@
 
     cursor: pointer;
 
+}
+
+.calc-btn {
+    display: block;
+
+    width: 220px;
+
+    margin: 20px auto;
+
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #224ca7ec,
+        #214ababc
+    );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    box-shadow:
+        0 4px 12px rgba(7, 10, 17, 0.512);
 }
