@@ -104,11 +104,20 @@
     }
     </script>
 
+    <link rel="stylesheet" href="../css/header.css">
+
 </head>
 
 <body>
 
+    <div id="header-placeholder"></div>
+
     <div class="container">
+
+        <h1>🧮 SmartCalc Hub</h1>
+        <p>Free Online Calculators for Everyone</p>
+        <p>_________________________________</p>
+        <br><br>
         
         <h1>BMI Calculator</h1>
         
@@ -292,18 +301,18 @@
     <div id="actionButtons" class="action-buttons">
 
         <button
-            class="share-btn"
-            onclick="shareResult()">
-
-           📤 Share Result
-
-        </button>
-
-        <button
             class="copy-btn"
             onclick="copyResult()">
 
             📋 Copy Result
+
+        </button>
+
+        <button
+            class="share-btn"
+            onclick="shareResult()">
+
+           📤 Share Result
 
         </button>
 
@@ -681,7 +690,7 @@
 
     </div>
 
-    <div class="container">
+    <div>
 
         <footer>
 
@@ -714,6 +723,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
     <script src="../script.js"></script>
+
+    <script src="../js/header.js"></script>
 
     <script src="../js/bmi.js"></script>
 
