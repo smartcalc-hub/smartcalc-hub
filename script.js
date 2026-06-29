@@ -115,11 +115,20 @@ document.addEventListener("DOMContentLoaded", function () {
     let savedTheme =
         localStorage.getItem("theme");
 
+    const toggle =
+        document.getElementById(
+            "themeToggle"
+        );
+
     if (savedTheme === "dark") {
 
         document.body.classList.add(
             "dark-mode"
         );
+
+        if (toggle) {
+            toggle.checked = true;
+        }
 
     }
 
