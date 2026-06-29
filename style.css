@@ -6,17 +6,17 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #f4f7fb;
-    margin: 0;
-    padding: 20px;
+    background: #fff;
+    
 }
 
 .container {
-    max-width: 700px;
+    max-width: 900px;
+    width: 95%;
     margin: auto;
     background: white;
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 30px;
     box-shadow: 0 4px 20px rgba(0,0,0,.08);
 }
 
@@ -25,8 +25,8 @@ h1 {
 
     background: linear-gradient(
         135deg,
-        #2563eb,
-        #60a5fa
+        #03246a,
+        #052040
     );
 
     -webkit-background-clip: text;
@@ -51,15 +51,15 @@ p {
 
     background: linear-gradient(
         135deg,
-        #2563eb,
-        #1d4ed8
+        #210866,
+        #1807cc
     );
 
     color: white;
 
-    padding: 18px;
+    padding: 15px;
 
-    border-radius: 12px;
+    border-radius: 20px;
 
     cursor: pointer;
 
@@ -81,7 +81,7 @@ p {
     transform: translateY(-2px);
 
     box-shadow:
-        0 8px 18px rgba(0,0,0,0.15);
+        0 8px 18px rgb(0, 0, 0);
 }
 
 .accordion-content {
@@ -94,14 +94,14 @@ p {
 
     background: white;
 
-    border-radius: 12px;
+    border-radius: 15px;
 
-    margin-top: 8px;
+    margin-top: 10px;
 
     padding: 0 10px;
 
     box-shadow:
-        0 4px 10px rgba(0,0,0,0.08);
+        0 4px 10px rgba(0, 0, 0, 0.619);
 }
 
 .accordion-content a {
@@ -116,13 +116,13 @@ p {
 
     margin-top: 8px;
 
-    background: #f8fafc;
+    background: #ffffff;
 
-    border: 1px solid #e2e8f0;
+    border: 1px solid #5275a2;
 
-    border-radius: 8px;
+    border-radius: 12px;
 
-    color: #222;
+    color: #090808;
 }
 
 .accordion-content button:hover {
@@ -139,7 +139,7 @@ p {
     flex: 1;
     background: white;
     padding: 15px;
-    border-radius: 12px;
+    border-radius: 15px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.837);
 }
@@ -157,32 +157,6 @@ select {
     border: 1px solid #ccc;
     border-radius: 30px;
     box-sizing: border-box;
-}
-
-#result {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.result-card {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 15px;
-    margin-top: 12px;
-    box-shadow: 0 2px 10px rgba(15, 12, 12, 0.725);
-    text-align: center;
-}
-
-.result-title {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 5px;
-}
-
-.result-value {
-    font-size: 22px;
-    font-weight: bold;
-    color: #2563eb;
 }
 
 .hero {
@@ -253,25 +227,25 @@ select {
 }
 
 .copy-btn {
-    width: 25%;
+    width: 30%;
     margin-top: 12px;
     background: #03441a;
     color: white;
     border: none;
-    padding: 14px;
+    padding: 10px;
     border-radius: 30px;
     cursor: pointer;
 }
 
 .copy-btn:hover {
-    opacity: o.9;
+    opacity: 0.9;
 }
 
 .share-btn {
 
-    width: 25%;
+    width: 30%;
 
-    margin-top: 10px;
+    margin-top: 12px;
 
     background: #354566;
 
@@ -279,7 +253,7 @@ select {
 
     border: none;
 
-    padding: 12px;
+    padding: 10px;
 
     border-radius: 30px;
 
@@ -297,7 +271,7 @@ select {
 
 .pdf-btn {
 
-    width: 25%;
+    width: 30%;
 
     margin-top: 10px;
 
@@ -307,7 +281,7 @@ select {
 
     border: none;
 
-    padding: 12px;
+    padding: 7.5px;
 
     border-radius: 30px;
 
@@ -320,12 +294,93 @@ select {
 .pdf-btn:hover {
 
     opacity: 0.9;
-
 }
 
 .theme-switch {
-    text-align: right;
-    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.switch {
+    position: relative;
+    width: 70px;
+    height: 36px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+
+    position: absolute;
+    cursor: pointer;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: #dc2626; /* OFF color */
+
+    border-radius: 50px;
+
+    transition: .4s;
+}
+
+.slider::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 28px;
+    height: 28px;
+
+    left: 4px;
+    bottom: 4px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    transition: .4s;
+}
+
+.slider::after {
+
+    content: "OFF";
+
+    position: absolute;
+
+    right: 10px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: white;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+input:checked + .slider {
+    background: #16a34a; /* ON color */
+}
+
+input:checked + .slider::before {
+    transform: translateX(34px);
+}
+
+input:checked + .slider::after {
+
+    content: "ON";
+
+    left: 12px;
+    right: auto;
 }
 
 .dark-mode {
@@ -447,7 +502,7 @@ button:focus {
 
 .history-box {
 
-    background: white;
+    background: rgb(255, 255, 255);
 
     padding: 15px;
 
