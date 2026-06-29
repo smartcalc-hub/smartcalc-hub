@@ -6,7 +6,7 @@
 
     background: white;
 
-    padding: 20px;
+    padding: 10px;
 
     border-radius: 15px;
 
@@ -38,45 +38,42 @@
 .btn-grid {
 
     display: grid;
-
     grid-template-columns:
-    repeat(5, 1fr);
-
-    gap: 10px;
+    repeat(8, 1fr);
+    gap: 6px;
+    margin-top: 15px;
 
 }
 
 .btn-grid button {
 
-    padding: 15px;
-
-    font-size: 18px;
-
-    border: none;
-
-    border-radius: 10px;
-
+    padding: 12px 5px;
+    font-size: 14px;
+    border: 1px solid #6a5959;
+    border-radius: 4px;
     cursor: pointer;
-
-    background: #f1f5f9;
+    background: #f9f9f9;
+    transition: 0.1s;
 
 }
 
 .btn-grid button:hover {
 
-    background: #e2e8f0;
+    background: #e0e0e0;
 
 }
 
+.func-btn {
+    background: #2f5a93;
+    color: white;
+    font-size: 12px;
+}
 .equal-btn {
 
-    grid-column: span 5;
-
-    background: #2563eb !important;
-
-    color: white;
-
-    font-size: 22px;
+    grid-column: span 2;
+    background: #ff9500;
+    color: rgb(96, 75, 75);
+    font-size: 18px;
 
 }
 
