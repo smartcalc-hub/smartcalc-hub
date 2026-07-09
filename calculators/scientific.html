@@ -18,16 +18,15 @@ content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="../css/scientific.css">
 
+<link rel="stylesheet" href="../css/header.css">
+
 </head>
 
 <body>
 
-<div class="container">
+    <div id="header"></div>
 
-    <h1>🧮 SmartCalc Hub</h1>
-        <p>Free Online Calculators for Everyone</p>
-        <p>_________________________________</p>
-        <br><br>
+<div class="container">
 
     <h1>
         🧮 Scientific Calculator
@@ -38,68 +37,232 @@ content="width=device-width, initial-scale=1.0">
     </p>
     
     <div class="calculator">
-        <input
-        type="text"
-        id="display"
-        readonly>
 
-        <div class="btn-grid">
+        <!-- ========================= -->
+        <!-- Display -->
+        <!-- ========================= -->
 
-            <button onclick="clearDisplay()">AC</button>
-            <button onclick="deleteLast()">DEL</button>
-            <button onclick="appendValue('(')">(</button>
-            <button onclick="appendValue(')')">)</button>
-            <button onclick="appendValue('^2')">x²</button>
-            <button onclick="appendValue('^3')">x³</button>
-            <button onclick="appendValue('^')">xʸ</button>
-            <button onclick="appendInverse()">x⁻¹</button>
-            <button onclick="appendFunction('√(')">√</button>
-            <button onclick="appendFunction('³√(')">³√</button>
-            <button onclick="appendFunction('log(')">log</button>
-            <button onclick="appendFunction('ln(')">ln</button>
-            <button onclick="appendTrig('sin')">sin</button>
-            <button onclick="appendTrig('cos')">cos</button>
-            <button onclick="appendTrig('tan')">tan</button>
-            <button onclick="appendValue('-')">−</button>
-            <button onclick="toggleAngleMode()"> <span id="angleMode">DEG</span> </button>
-            <button onclick="appendFunction('sin⁻¹(')">sin⁻¹</button>
-            <button onclick="appendFunction('cos⁻¹(')">cos⁻¹</button>
-            <button onclick="appendFunction('tan⁻¹(')">tan⁻¹</button>
-            <button onclick="appendValue('7')">7</button> 
-            <button onclick="appendValue('8')">8</button> 
-            <button onclick="appendValue('9')">9</button>
-            <button onclick="appendValue('%')">%</button>
-            <button onclick="appendValue('π')">π</button> 
-            <button onclick="appendValue('e')">e</button>
-            <button onclick="appendValue('EXP')">EXP</button>
-            <button onclick="appendValue('!')">x!</button>
-            <button onclick="appendValue('4')">4</button> 
-            <button onclick="appendValue('5')">5</button> 
-            <button onclick="appendValue('6')">6</button>
-            <button onclick="appendValue('*')">×</button>
-            <button onclick="memoryAdd()">M+</button>
-            <button onclick="memoryRecall()">MR</button> 
-            <button onclick="memoryClear()">MC</button> 
-            <button onclick="appendValue('/')">÷</button>
-            <button onclick="appendValue('1')">1</button> 
-            <button onclick="appendValue('2')">2</button> 
-            <button onclick="appendValue('3')">3</button>
-            <button onclick="appendValue('+')">+</button> 
-            <button onclick="appendValue('EXP')">EXP</button>
-            <button onclick="appendValue('0')">0</button>
-            <button onclick="appendAns()">Ans</button>
-            <button onclick="appendValue('.')">.</button>
-            <button class="equal-btn" onclick="calculateResult()">=</button>
+        <div class="calc-screen">
+
+            <div class="status-bar">
+
+                <span id="angleMode">DEG</span>
+
+                <span id="memoryStatus"></span>
+
+                <span id="ansStatus"></span>
+
+            </div>
+
+            <input
+                type="text"
+                id="display"
+                placeholder="0">
 
         </div>
 
-    </div>      
+        <!-- ========================= -->
+        <!-- Top Controls -->
+        <!-- ========================= -->
+
+        <div class="top-controls">
+
+            <button id="shiftBtn" data-action="shift">SHIFT</button>
+
+            <button data-action="mc">MC</button>
+
+            <button data-action="mr">MR</button>
+
+            <button data-action="mplus">M+</button>
+
+            <button data-action="mminus">M−</button>
+
+            <button class="danger-btn"
+            data-action="clear">
+                AC
+            </button>
+
+            <button class="danger-btn"
+            data-action="delete">
+                DEL
+            </button>
+
+            <button data-value="(">(</button>
+
+            <button data-value=")">)</button>
+
+            <button id="degRadBtn"
+            data-action="angle">
+
+                DEG
+
+            </button>
+
+            <button data-action="ans">
+
+                Ans
+
+            </button>
+
+            <button data-value="EXP">
+
+                EXP
+
+            </button>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- Bottom -->
+        <!-- ========================= -->
+
+        <div class="calc-body">
+
+            <!-- Scientific -->
+
+            <div class="scientific-panel">
+
+                <button id="nCrBtn" onclick="insertNCR()">nCr</button>
+  
+                <button id="sinBtn" data-func="sin">sin</button>
+
+                <button id="cosBtn" data-func="cos">cos</button>
+
+                <button id="tanBtn" data-func="tan">tan</button>
+
+                <button id="logBtn" data-func="log">log</button>
+
+                <button id="lnBtn" data-func="ln">ln</button>
+
+                <button id="sqrtBtn" data-func="sqrt">√</button>
+
+                <button data-action="square">x²</button>
+
+                <button data-action="cube">x³</button>
+
+                <button data-value="^">xʸ</button>
+
+                <button data-action="inverse">x⁻¹</button>
+
+                <button data-value="%">%</button>
+
+                <button data-value="π">π</button>
+
+                <button data-value="e">e</button>
+
+                <button data-value="!">x!</button>
+
+            </div>
+
+            <!-- Number Pad -->
+
+            <div class="number-panel">
+
+                <button data-value="7">7</button>
+
+                <button data-value="8">8</button>
+
+                <button data-value="9">9</button>
+
+                <button class="operator-btn"
+                data-value="/">
+                    ÷
+                </button>
+
+                <button data-value="4">4</button>
+
+                <button data-value="5">5</button>
+
+                <button data-value="6">6</button>
+
+                <button class="operator-btn"
+                data-value="*">
+                    ×
+                </button>
+
+                <button data-value="1">1</button>
+
+                <button data-value="2">2</button>
+
+                <button data-value="3">3</button>
+
+                <button class="operator-btn"
+                data-value="-">
+                    −
+                </button>
+
+                <button data-value="0">0</button>
+
+                <button data-value=".">.</button>
+
+                <button data-action="ans">
+
+                    Ans
+
+                </button>
+
+                <button class="operator-btn"
+                data-value="+">
+
+                    +
+
+                </button>
+
+                <button
+                id="equalBtn"
+                class="equal-btn">
+
+                    =
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="result"></div>
+
+    <!-- Keyboard Help -->
+
+    <div class="keyboard-help">
+
+        <h3>
+            ⌨ Keyboard Shortcuts
+        </h3>
+
+        <p>
+
+            Enter = Calculate
+
+        </p>
+
+        <p>
+
+            Backspace = Delete
+
+        </p>
+
+        <p>
+
+            Delete = Clear
+
+        </p>
+
+        <p>
+
+            Esc = AC
+
+        </p>
+
+    </div>
 
     <div id="result"></div>
 
 </div>
 
-<br><br>
+<br><br><br><br>
 
 <div>
 
@@ -114,16 +277,16 @@ content="width=device-width, initial-scale=1.0">
             <br><br>
 
             <a href="../about.html">About</a>
-            |
+            /
 
             <a href="../contact.html">Contact</a>
-            |
+            /
 
             <a href="../privacy.html">Privacy Policy</a>
-            |
+            /
 
             <a href="../terms.html">Terms & Conditions</a>
-            |
+            /
 
             <a href="../disclaimer.html">Disclaimer</a>
 
@@ -134,6 +297,10 @@ content="width=device-width, initial-scale=1.0">
     <script src="../script.js"></script>
 
     <script src="../js/scientific.js"></script>
+
+    <script src="../js/header.js"></script>
+
+    <script src="../js/header-loader.js"></script>
 
 </body>
 </html>
