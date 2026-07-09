@@ -319,20 +319,3 @@ function updateGauge(bmi) {
         `rotate(${angle}deg)`;
 
 }
-
-document.getElementById(
-    "result"
-).innerText =
-
-`BMI Score: ${bmiRounded}
-
-Category: ${category}
-
-Healthy Weight Range:
-${healthyMin} kg - ${healthyMax} kg
-
-BMI Prime:
-${bmiPrime}
-
-Ponderal Index:
-${ponderalIndex}`;
